@@ -1,0 +1,22 @@
+<mat-list *ngIf="campeao; else semRegistro">
+  <mat-list-item> Nome: {{campeao.nome}} </mat-list-item>
+  <mat-list-item> Email: {{campeao.email}} </mat-list-item>
+  <mat-list-item> Tipo: {{campeao.tipo} </mat-list-item>
+  <mat-list-item> Cor Sabre: {{campeao.corSabre}} </mat-list-item>
+  <mat-list-item> Afinidade Força: {{campeao.afinidadeForca}} </mat-list-item>
+  <mat-list-item> Força Fisica: {{campeao.forcaFisica}} </mat-list-item>
+  <mat-list-item> HP: {{campeao.hp}} </mat-list-item>
+  <mat-list-item> Habilidade Com Sabre: {{campeao.habilidadeComSabre}} </mat-list-item>
+  <mat-list-item> Mental: {{campeao.mental}} </mat-list-item>
+  <mat-list-item> Previsao: {{campeao.previsao}} </mat-list-item>
+</mat-list>
+<mat-card>
+  <mat-card-actions>
+    <button color="accent" mat-raised-button (click)="editar()">Editar</button>
+    <button color="warn" mat-raised-button (click)="excluir()">Excluir</button>
+  </mat-card-actions>
+</mat-card>
+
+<ng-template #semRegistro>
+  <h1 class="full-width main-div">Nenhum registro encontrado!</h1>
+</ng-template>
